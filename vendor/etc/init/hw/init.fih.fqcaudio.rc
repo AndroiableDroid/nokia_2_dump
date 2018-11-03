@@ -1,0 +1,34 @@
+# fihtdc, DanielYJHsieh, 20141205, add for FQC audio loopback
+# For FQC audio loopback
+
+service fqcaudioloopback /vendor/bin/sh /vendor/bin/fqcaudioloopback_run.sh
+	user system
+	oneshot
+	disabled
+	
+on property:debug.sys.fqcaudio=11
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=10
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=21
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=20
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=31
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=30
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=41
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=40
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=51
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=50
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=61
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=60
+    start fqcaudioloopback
+on property:debug.sys.fqcaudio=0
+    stop fqcaudioloopback
